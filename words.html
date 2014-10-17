@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+main {
+	perspective: 1px;
+	font-size: 20vh;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+span {
+	display: inline-block;
+	padding: 100vh 0;
+}
+span:nth-child(1) {
+	transform: scale(2) translateZ(-2px);
+}
+span:nth-child(2) {
+	transform: scale(3) translateZ(-3px);
+}
+span:nth-child(3) {
+	transform: translateZ(-1px);
+}
+	</style>
+</head>
+<body>
+	<main>
+		<span>Parallax</span>
+		<span>is</span>
+		<span>fun</span>
+	</main>
+</body>
+</html>

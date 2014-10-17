@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Landscape</title>
+	<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+main {
+	transform-style: preserve-3d;
+	perspective: 1px;
+	background-color: #CCF;
+	background-image: radial-gradient(#FFA 0%, #FFA 60%, rgba(255, 255, 255, 0) 70%);
+	background-size: 15vmin 15vmin;
+	background-repeat: no-repeat;
+	background-position: 80vw 2vh;
+	height: 100vh;
+	width: 100vw;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+.land {
+	width: 1000vw;
+	height: 100vh;
+	position: absolute;
+	bottom: 0;
+	background-repeat: repeat-x;
+	background-position: bottom left;
+}
+.grass {
+	transform: translateZ(0);
+	background-image: url(grass.png);
+	background-size: auto 20vh;
+	z-index: 3;
+}
+.houses {
+	transform: scale(6.75) translateZ(-6px);
+	background-image: url(house.png);
+	background-size: auto 20vh;
+	z-index: 2;
+}
+.mountain {
+	transform: scale(16.75) translateZ(-16px);
+	background-image: url(mountain.png);
+	background-size: auto 60vh;
+	z-index: 1;
+}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="land grass"></div>
+		<div class="land houses"></div>
+		<div class="land mountain"></div>
+	</main>
+</body>
+</html>
